@@ -1,0 +1,19 @@
+Algorithme bouclesPour
+Variables compteur: entier
+Début
+    // Exemples de boucle pour
+    Pour compteur AllantDe 2 A 4 ParPasDe 1
+        afficher(compteur) // 2 puis 3 puis 4
+    FinPour
+    Pour compteur AllantDe 2 A 4
+        afficher(compteur) // 2 puis 3 puis 4
+    FinPour
+
+    Pour compteur AllantDe 2 A 10 ParPasDe 2
+        afficher(compteur) // 2 puis 4 puis 6 puis 8 puis 10
+    FinPour
+
+    Pour compteur AllantDe 12 A 1 ParPasDe -3
+        afficher(compteur) // 12 puis 9 puis 6 puis 3
+    FinPour
+Fin

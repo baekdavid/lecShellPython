@@ -1,0 +1,21 @@
+01. Création des groupes
+groupadd president
+groupadd dev
+groupadd adminsys
+
+02. Vérification
+tail -n3 /etc/group
+
+03. Ajout des utilisateurs aux groupes
+usermod nom1 -aG president
+usermod nom2 -aG dev
+usermod nom3 -aG adminsys
+
+04. Vérification
+tail -n3 /etc/group
+
+Bonus1. Création des groupes à partir du fichier salaries.txt
+cut -d: -f2 /home/user/entreprise/admin/rh/salaries.txt | xargs -I % sh -c "groupadd %"
+
+Bonus2. Ajout des utilisateurs aux groupes à partir du fichier salaries.txt
+awk -F ":" '{ system("usermod -aG " $2 " " $1) }' /home/user/entreprise/admin/rh/salaries.txt 

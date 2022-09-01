@@ -1,0 +1,11 @@
+01. Rendre les fichiers et dossiers supprimables uniquement par le propriétaire
+chmod -R +t entreprise/
+
+Bonus. Rendre uniquement les dossiers supprimables uniquement par le propriétaire (en une seule commande)
+find /home/user/entreprise -type d | xargs -I % sh -c "chmod +t %"
+
+02. Créer un dossier avec nom4 dans memos que seul nom4 peut supprimer
+su - nom4
+cd /home/user/entreprise/common/memos/
+mkdir testnom4
+chmod +t testnom4

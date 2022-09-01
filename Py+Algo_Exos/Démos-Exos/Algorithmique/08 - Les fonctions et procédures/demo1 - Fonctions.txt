@@ -1,0 +1,44 @@
+Algorithme test
+Variables a, b, apb2: reels
+Début
+    a <- 2
+    b <- 3
+    apb2 <- a^2 + 2*a*b + b^2
+    afficher(apb2)
+    a <- 4
+    b <- 1
+    apb2 <- a^2 + 2*a*b + b^2
+    afficher(apb2)
+    a <- 8
+    b <- 2
+    apb2 <- a^2 + 2*a*b + b^2
+    afficher(apb2)
+Fin
+
+// --- 
+// En plus propre
+Fonction calcul(nb1: réel, nb2: réel): réel
+Variables total: réel
+Début
+    // Calcul de (a+b)^2
+    total <- nb1^2 + 2*nb1*nb2 + nb2^2
+    // Renvoi la valeur à l'algorithme principal
+    retourner(total)
+Fin
+
+Algorithme monalgopluspropre
+Variables apb2: réel
+Début
+    apb2 <- calcul(2, 3)
+    afficher(apb2)
+    
+    apb2 <- calcul(4, 1)
+    afficher(apb2)
+    
+    apb2 <- calcul(8, 2)
+    afficher(apb2)
+
+    afficher(calcul(4, 4))
+
+    afficher(total) // ERREUR, total n'existe que dans calcul
+Fin

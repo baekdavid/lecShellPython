@@ -1,0 +1,7 @@
+01. Retrouver toutes les lignes contenant user
+    "contient user"
+grep user /etc/passwd
+
+02. Retrouver les informations de l'utilisateur user
+    "Commence par user:"
+grep "^user:" /etc/passwd

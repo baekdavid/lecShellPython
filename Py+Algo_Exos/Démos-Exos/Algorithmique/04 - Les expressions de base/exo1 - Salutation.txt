@@ -1,0 +1,13 @@
+// Ecrire un algorithme qui demande nom et prénom à l’utilisateur et le salue avec ces informations.
+Algorithme dire_bonjour
+Variables prenom, nom : chaines de caractères
+Début
+    // Demande le prénom
+    afficher("Votre prénom ?")
+    lire(prenom)
+    // Demande le nom
+    afficher("Votre nom ?")
+    lire(nom)
+    // Salutations
+    afficher("Bonjour " & prenom & " " & nom)
+Fin

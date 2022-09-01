@@ -1,0 +1,18 @@
+// Demander à l’utilisateur deux nombres et afficher le plus grand des deux.
+Algorithme plusgrand
+Variables a, b : réels
+Début
+    // Nombre 1
+    afficher("Premier nombre ?")
+    lire(a)
+    // Nombre 2
+    afficher("Deuxième nombre ?")
+    lire(b)
+    // Cas a > b
+    Si a > b
+        afficher("Le premier nombre est le plus grand")
+    // Cas a <= b
+    Sinon
+        afficher("Le deuxième nombre est le plus grand")
+    Finsi
+Fin

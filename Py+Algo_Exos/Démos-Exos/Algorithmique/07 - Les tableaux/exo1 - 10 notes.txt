@@ -1,0 +1,19 @@
+// Faire un algorithme permettant de rentrer 10 notes dans un tableau ; il faudra ensuite demander à l’utilisateur l’index de la note souhaitée et l’afficher
+Algorithme lesnotes
+Variables index: entier
+          note: réel
+          tableau notes[10]: réel
+Début
+    // Remplir le tableau
+    Pour index AllantDe 1 A 10
+        afficher("Note à la position " & index)
+        lire(note)
+        notes[index - 1] <- note
+        // Possible en une seule ligne : lire(notes[index - 1])
+    FinPour
+
+    // Affichage de note
+    afficher("Position de la note souhaitée [1-10]")
+    lire(index)
+    afficher(notes[index - 1])
+Fin

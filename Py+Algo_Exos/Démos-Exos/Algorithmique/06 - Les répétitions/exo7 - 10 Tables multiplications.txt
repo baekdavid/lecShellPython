@@ -1,0 +1,14 @@
+// Afficher les tables de multiplication des entiers de 1 à 9
+Algorithme tablesMultiplications
+Variables chiffre, multiplicateur, produit: entier
+Début
+    // Construction des tables de multiplications
+    Pour chiffre AllantDe 1 A 9
+        afficher("== Table de multiplication de " & chiffre & " ==")
+        // Construction de la table pour le chiffre
+        Pour multiplicateur AllantDe 1 A 10
+            produit <- multiplicateur * chiffre
+            afficher(multiplicateur & "x" & chiffre & "=" & produit)
+        FinPour
+    FinPour
+Fin

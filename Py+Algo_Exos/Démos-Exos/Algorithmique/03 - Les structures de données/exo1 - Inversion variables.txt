@@ -1,0 +1,10 @@
+// Ecrire un algorithme qui permet d’échanger les valeurs de deux variables
+Algorithme inversion
+Variables a, b, tmp : entier
+Début
+    a <- 3
+    b <- 2
+    tmp <- a
+    a <- b
+    b <- tmp
+Fin

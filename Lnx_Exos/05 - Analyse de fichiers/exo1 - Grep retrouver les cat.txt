@@ -1,0 +1,7 @@
+01. Retrouver toutes les commandes contenant cat
+    "Contient cat"
+grep cat .bash_history
+
+02. Retrouver toutes les commandes qui commencent par cat
+    "Commence par cat"
+grep "^cat" .bash_history

@@ -1,0 +1,26 @@
+// Reprendre l’algorithme pour rentrer 10 notes du slide précédent et créer une procédure pour la partie saisie des notes.
+// Notes est fourni par référence pour permettre à la procédure de modifier le tableau de l'algorithme principal
+Procédure demanderNotes(notes[10]: réels par reference)
+Variables i: entier
+          note: réel
+Début
+    // Remplir le tableau
+    Pour i AllantDe 0 A 9
+        afficher("Note à la position " & i + 1)
+        lire(note)
+        notes[i] <- note
+    FinPour
+Fin
+
+Algorithme lesnotes
+Variables index: entier
+          tableau notes[10]: réel
+Début
+    // Demande les notes
+    demanderNotes(notes)
+
+    // Affichage de note
+    afficher("Position de la note souhaitée [1-10]")
+    lire(index)
+    afficher(notes[index - 1])
+Fin

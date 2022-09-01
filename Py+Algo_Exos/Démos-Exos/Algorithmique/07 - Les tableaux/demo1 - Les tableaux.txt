@@ -1,0 +1,36 @@
+Algorithme tableaux
+Variables index1, index2: entier
+          tableau t1[3], t2[3][4]: entier
+Début
+    // T1
+    t1 <- [9, 8, 7]
+    t1[0] <- 9
+    t1[1] <- 8
+    t1[2] <- 7
+
+    // T2
+    t2[0] <- [9, 9, 9, 9]
+    t2[1] <- [8, 8, 8, 8]
+    t2[2] <- [7, 7, 7, 7]
+    t2[0][0] <- 9
+    t2[0][1] <- 9
+    t2[0][2] <- 9
+    t2[0][3] <- 9
+    t2[1][0] <- 8
+    // ...
+    t2[2][3] <- 7
+    t2 <- [[9, 9, 9, 9], [8, 8, 8, 8], [7, 7, 7, 7]]
+
+
+    Pour index1 AllantDe 0 A 2
+        t1[index1] <- 9
+    FinPour
+    // t1 = [9, 9, 9]
+
+    Pour index1 AllantDe 0 A 2
+        Pour index2 AllantDe 0 A 3
+            t2[index1][index2] <- 9
+        FinPour
+    FinPour
+    // t2 = [[9, 9, 9, 9], [9, 9, 9, 9], [9, 9, 9, 9]]
+Fin

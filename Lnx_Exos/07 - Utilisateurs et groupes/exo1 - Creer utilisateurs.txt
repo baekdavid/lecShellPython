@@ -1,0 +1,12 @@
+01. Pour créer les utilisateurs
+useradd nom1 -m -s /bin/bash -c "President"
+useradd nom2 -m -s /bin/bash -c "dev"
+useradd nom3 -m -s /bin/bash -c "adminsys"
+
+02. Pour définir le mot de passe
+passwd nom1 (puis remplir les mots de passe)
+passwd nom2 (puis remplir les mots de passe)
+passwd nom3 (puis remplir les mots de passe)
+
+bonus. Créer utilisateur en une seule ligne (sans commentaire)
+cat /home/user/entreprise/admin/rh/salaries.txt | cut -d: -f1 | xargs -I % sh -c 'useradd % -m -s /bin/bash'

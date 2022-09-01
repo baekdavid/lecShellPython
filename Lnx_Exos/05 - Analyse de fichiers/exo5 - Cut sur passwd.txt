@@ -1,0 +1,5 @@
+01. N'afficher que l'utilisateur et son dossier personnel
+cut -d ":" -f 1,6 /etc/passwd
+
+bonus. Modifier le séparateur de sortie
+cut -d ":" -f 1,6 /etc/passwd --output-delimiter=" a le dossier personnel "

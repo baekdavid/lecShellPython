@@ -1,0 +1,29 @@
+// Reprendre l’algorithme pour rentrer 10 notes du slide précédent et créer une fonction pour la partie saisie des notes.
+Fonction demanderNotes() : tableau réel
+Variables i: entier
+          note: réel
+          tableau notes[10]: réel
+Début
+    // Remplir le tableau
+    Pour i AllantDe 0 A 9
+        afficher("Note à la position " & i + 1)
+        lire(note)
+        notes[i] <- note
+    FinPour
+
+    // Retourner le tableau
+    retourner(notes)
+Fin
+
+Algorithme lesnotes
+Variables index: entier
+          tableau notes[10]: réel
+Début
+    // Demande les notes
+    notes <- demanderNotes()
+
+    // Affichage de note
+    afficher("Position de la note souhaitée [1-10]")
+    lire(index)
+    afficher(notes[index - 1])
+Fin

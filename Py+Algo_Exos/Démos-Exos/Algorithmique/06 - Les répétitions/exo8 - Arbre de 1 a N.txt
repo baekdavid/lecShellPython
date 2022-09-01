@@ -1,0 +1,25 @@
+// Demander un entier N à l’utilisateur et calculer l’affichage suivant 
+//  1
+//  1 2
+//  1 2 3
+//  1 2 3…N
+Algorithme arbreChiffres
+Variables nombreUtilisateur, compteur1, compteur2 : entier
+          texte : chaine de caractères
+Début
+    // Demander à l'utilisateur N
+    afficher("Nombre entier > 1 limite de l'arbre ? ")
+    lire(nombreUtilisateur)
+
+    // Boucle des lignes
+    Pour compteur1 AllantDe 1 A nombreUtilisateur
+        // Vider texte
+        texte <- ""
+        // Boucle de contenu de ligne
+        Pour compteur2 AllantDe 1 A compteur1
+            texte <- texte & compteur2
+        FinPour
+        // Afficher texte
+        afficher(texte)
+    FinPour
+Fin

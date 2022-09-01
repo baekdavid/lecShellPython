@@ -1,0 +1,58 @@
+// Faire un menu principal permettant de lancer, au choix, l’un des deux algorithmes précédents ; répéter jusqu’à ce que l’utilisateur choisisse le troisième choix : ‘3’
+Algorithme menuPrincipal
+Variables choixMenu : chaine de caractère
+          nombreUtilisateur, somme : réel
+Début
+    // Valeur neutre pour rentrer obligatoirement dans la boucle
+    choixMenu <- "init"
+
+    // Répétition du menu principal
+    TantQue choixMenu != "3"
+        // Affichage du menu principal + choix utilisateur
+        afficher("== Menu Principal ==")
+        afficher("1. Nombre entre 1 et 3")
+        afficher("2. Somme de nombres")
+        afficher("3. Quitter")
+        lire(choixMenu)
+
+        // Choix 1
+        Si choixMenu = "1"
+            // Affecte une valeur volontairement fausse (Pour rentrer dans la boucle)
+            nombreUtilisateur <- -1
+            // Tant que la valeur n'est pas correcte
+            TantQue nombreUtilisateur < 1 Ou nombreUtilisateur > 3
+                // Demande le nombre à l'utilisateur
+                afficher("Donnez un nombre entre 1 et 3 inclus")
+                lire(nombreUtilisateur)
+            FinTantQue
+        // Choix 2
+        Sinon
+            Si choixMenu = "2"
+                // Affectation par défaut
+                nombreUtilisateur <- 0
+                somme <- 0
+
+                // Tant que l'utilisateur rentre un nombre autre que -1
+                TantQue nombreUtilisateur != -1
+                    // Ajoute le nombre à la somme
+                    somme <- somme + nombreUtilisateur
+                    // Demande le nombre à l'utilisateur
+                    afficher("nombre à ajouter à la somme (-1 pour arrêter) ?")
+                    lire(nombreUtilisateur)
+                    // Si on met le somme après lire, alors on ajoutera le -1 à la somme globale
+                FinTantQue
+
+                // Affiche la somme des nombres entrés
+                afficher(somme)
+        // Choix 3
+            Sinon
+                Si choixMenu = "3"
+                    afficher("Quitter !")
+        // Choix invalide
+                Sinon
+                    afficher("Choix invalide")
+                Finsi
+            Finsi
+        Finsi
+    FinTantQue
+Fin

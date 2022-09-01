@@ -1,0 +1,3 @@
+01. Lister les commandes de bash_history
+    Ne garder que la commande (donc sans options/arguments)
+cut -d " " -f 1 .bash_history

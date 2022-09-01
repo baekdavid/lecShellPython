@@ -1,0 +1,46 @@
+01. Se connecter en tant que root
+su -
+ls /home/user
+
+
+02. Créer le groupe entreprise
+groupadd entreprise
+
+03. Ajouter les nomN à entreprise
+usermod -aG entreprise nom1
+usermod -aG entreprise nom2
+usermod -aG entreprise nom3
+usermod -aG entreprise nom4
+
+04. Vérifier l'ajout des utilisateurs
+cat /etc/group | grep entreprise
+
+05. Donner la propriété de entreprise (et tous les sous-dossiers) à nom1 et au groupe entreprise
+chown -R nom1:entreprise /home/user/entreprise
+
+06. Retirer l'accès aux utilisateurs hors entreprise (sans le -R serait suffisant pour refuser l'accès)
+chmod -R o-rwx entreprise
+
+07. Restreindre l'accès et la modification du dossier admin (membres du groupe admin uniquement)
+chgrp admin admin
+chmod g+w admin
+
+08. Restreindre l'accès au dossier admin/direction (nom1 uniquement)
+chmod 700 admin/direction
+
+09. Configurer le dossier common (admin tous les droits, les autres lecture seule)
+chgrp -R admin common
+chmod 775 common
+chmod 775 common/memos
+
+10. (si applicable) Créer le dossier personnel de nom4
+mkdir documents/nom4
+chown nom1:entreprise documents/nom4
+
+11. Donner la propriété du dossier personnel à chaque utilisateur correspondant
+chown nom2 documents/nom2
+chown nom3 documents/nom3
+chown nom4 documents/nom4
+
+12. Définir les droits uniquement au propriétaire sur les dossiers personnels
+chmod 700 documents/*

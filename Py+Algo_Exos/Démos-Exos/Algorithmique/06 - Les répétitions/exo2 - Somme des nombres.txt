@@ -1,0 +1,21 @@
+// Demander des nombres à l’utilisateur jusqu’à ce qu’il entre -1, puis afficher la somme de ces nombres
+Algorithme somme
+Variables nombreUtilisateur, somme : réel
+Début
+    // Affectation par défaut
+    nombreUtilisateur <- 0
+    somme <- 0
+
+    // Tant que l'utilisateur rentre un nombre autre que -1
+    TantQue nombreUtilisateur != -1
+        // Ajoute le nombre à la somme
+        somme <- somme + nombreUtilisateur
+        // Demande le nombre à l'utilisateur
+        afficher("nombre à ajouter à la somme (-1 pour arrêter) ?")
+        lire(nombreUtilisateur)
+        // Si on met le somme après lire, alors on ajoutera le -1 à la somme globale
+    FinTantQue
+
+    // Affiche la somme des nombres entrés
+    afficher(somme)
+Fin

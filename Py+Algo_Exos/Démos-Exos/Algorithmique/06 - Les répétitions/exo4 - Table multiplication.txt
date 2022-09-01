@@ -1,0 +1,16 @@
+// Demander à l’utilisateur un entier entre 1 et 9 et en afficher la table de multiplication complète
+Algorithme tableMultiplication
+Variables chiffreUtilisateur, multiplicateur, produit: entier
+Début
+    // Demande le chiffre à l'utilisateur
+    afficher("Pour quel chiffre souhaitez-vous la table de multiplication ?")
+    lire(chiffreUtilisateur)
+
+    // Calcul de la table
+    Pour multiplicateur AllantDe 1 A 10
+        // Calcul du produit
+        produit <- chiffreUtilisateur * multiplicateur
+        // Affichage du résultat
+        afficher(multiplicateur & "x" & chiffreUtilisateur & "=" & produit)
+    FinPour
+Fin

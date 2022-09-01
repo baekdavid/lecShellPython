@@ -1,0 +1,33 @@
+// Le FizzBuzz : Compter de 1 à 100 et :
+//  - Remplacer les multiples de 3 par “Fizz”,
+//  - Remplacer les multiples de 5 par “Buzz”,
+//  - Remplacer les multiples de 15 par “FizzBuzz”,
+//  - Afficher “Bonus” après chaque nombre finissant par un 9 (9, 19, 29, etc.).
+Algorithme FizzBuzz
+Variables compteur: entier
+Début
+    // Aller de 1 à 100
+    Pour compteur AllantDe 1 A 100
+        // Remplacer les multiples de 15 par “FizzBuzz”,
+        Si compteur % 15 = 0
+            afficher("FizzBuzz")
+        Sinon
+        // Remplacer les multiples de 3 par “Fizz”,
+            Si compteur % 3 = 0
+                afficher("Fizz")
+        // Remplacer les multiples de 5 par “Buzz”,
+            Sinon
+                Si compteur % 5 = 0
+                    afficher("Buzz")
+        // Autre nombre
+                Sinon
+                    afficher(compteur)
+                FinSi
+            FinSi
+        FinSi
+        // Afficher “Bonus” après chaque nombre finissant par un 9 (9, 19, 29, etc.).
+        Si compteur % 10 = 9
+            afficher("Bonus")
+        FinSi
+    FinPour
+Fin

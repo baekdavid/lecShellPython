@@ -1,0 +1,90 @@
+// Demander à l’utilisateur deux nombres A (horizontal) et B (vertical), renvoyer le résultat (1,2,3) selon le tableau 
+Algorithme rechercheZone
+Variables A, B : entier
+Début
+    // Demande les informations
+    afficher("Merci de renseigner les deux indicateurs A (horizontal) et B (vertical)")
+    lire(A)
+    lire(B)
+
+    // Recherche hors tableau
+    Si A < 98 Ou A > 208 Ou B < 10 Ou B > 58
+        afficher("Les indicateurs sont hors tableau")
+    // Recherche dans le tableau
+    Sinon
+        // Ligne 1
+        Si B <= 20
+            // Zone 1
+            Si A <= 172
+                afficher("Zone 1")
+            // Zone 2
+            Sinon
+                Si A <= 189
+                    afficher("Zone 2")
+            // Hors zone
+                Sinon
+                    afficher("Hors zone")
+                Finsi
+            Finsi
+
+        // Ligne 2
+        Sinon
+            Si B <= 27
+                // Zone 1
+                Si A <= 167
+                    afficher("Zone 1")
+                // Zone 2
+                Sinon
+                    Si A <= 189
+                        afficher("Zone 2")
+                // Hors zone
+                    Sinon
+                        afficher("Hors zone")
+                    Finsi
+
+        // Ligne 3
+            Sinon
+                Si B <= 35
+                    // Zone 1
+                    Si A <= 153
+                        afficher("Zone 1")
+                    // Zone 2
+                    Sinon
+                        Si A <= 189
+                            afficher("Zone 2")
+                    // Zone 3
+                        Sinon
+                            afficher("Zone 3")
+                        Finsi
+                    Finsi
+        
+        // Ligne 4
+                Sinon
+                    Si B <= 45
+                        // Zone 3
+                        Si A >= 181
+                            afficher("Zone 3")
+                        // Zone 2
+                        Sinon
+                            Si A >= 141
+                                afficher("Zone 2")
+                        // Hors zone
+                            Sinon
+                                afficher("Hors zone")
+                            Finsi
+                        Finsi
+        // Ligne 5
+                    Sinon
+                        // Zone 3
+                        Si A >= 168
+                            afficher("Zone 3")
+                        // Hors zone
+                        Sinon
+                            afficher("Hors zone")
+                        Finsi
+                    Finsi
+                Finsi
+            Finsi
+        Finsi
+    Finsi
+Fin

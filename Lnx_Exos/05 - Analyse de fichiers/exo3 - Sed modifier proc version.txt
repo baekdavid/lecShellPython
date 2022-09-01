@@ -1,0 +1,8 @@
+01. Copier /proc/version dans le dossier utilisateur
+cp /proc/version ~/
+
+02. Afficher version en remplaçant le mail
+sed 's/debian-kernel@lists.debian.org/damien@ls-a.fr/' version
+
+03. Afficher version en remplaçant les chiffres par leurs écritures en texte
+sed 's/0/zero/g ; s/1/un/g ; s/2/deux/g ; s/3/trois/g ; s/4/quatre/g ; s/5/cinq/g ; s/6/six/g ; s/7/sept/g ; s/8/huit/g ; s/9/neuf/g' version 

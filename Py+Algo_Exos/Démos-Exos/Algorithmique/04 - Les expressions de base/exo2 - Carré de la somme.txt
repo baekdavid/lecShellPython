@@ -1,0 +1,12 @@
+// Ecrire un algorithme qui demande deux nombres et qui affiche le carré de la somme de ces deux nombres, c’est-à-dire ( a + b )²
+Algorithme aplusbcarre
+Variables a, b : réel
+Début
+    // Demande des nombres
+    afficher("Donnez deux nombres, l'un après l'autre")
+    lire(a)
+    lire(b)
+    // Calcul et affichage
+    afficher("a^2 + 2ab + b^2 : " & a ^ 2 & " + " & 2 * a * b & " + " & b ^ 2)
+    afficher("Résultat : " & (a + b) ^ 2)
+Fin

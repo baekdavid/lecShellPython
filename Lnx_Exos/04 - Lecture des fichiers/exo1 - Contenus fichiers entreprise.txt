@@ -1,0 +1,29 @@
+01. Se rendre dans entreprise
+cd ~/entreprise
+
+02. Ouvrir, avec nano, le fichier salaries.txt
+nano admin/rh/salaries.txt
+
+03. [Dans nano] écrire le contenu
+nom1:president
+nom2:dev
+nom3:adminsys
+
+04. [Dans nano] fermer et sauvegarder le fichier
+ctrl-x (quitter)
+y (sauvegarder)
+Touche entrée (valider le nom du fichier)
+
+05. Ouvrir, avec nano, le fichier cafe.txt
+nano common/memos/cafe.txt
+
+06. [Dans nano] écrire le contenu
+Le cafe est maintenant gratuit et illimite pour tout le monde !
+
+07. [Dans nano] fermer et sauvegarder le fichier
+ctrl-x (quitter)
+y (sauvegarder)
+Touche entrée (valider le nom du fichier)
+
+08. Renommer le fichier cafe.txt en cafegratuit.txt
+mv common/memos/cafe.txt common/memos/cafegratuit.txt

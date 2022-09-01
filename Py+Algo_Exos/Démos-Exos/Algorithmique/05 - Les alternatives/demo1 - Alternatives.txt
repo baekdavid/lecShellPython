@@ -1,0 +1,15 @@
+Algorithme sisinon
+Début
+    lire(a)
+
+    Si a = 2
+        afficher("a est égal à 2")
+    Sinon
+        afficher("a est différent de 2")
+        Si a > 3
+            moninstruction
+        Finsi
+    Finsi
+
+    afficher("coucou")
+Fin

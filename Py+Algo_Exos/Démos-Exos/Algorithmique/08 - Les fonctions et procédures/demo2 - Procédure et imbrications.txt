@@ -1,0 +1,99 @@
+Algorithme algosale
+Variables prenom, nom: chaine de caractères
+Début
+    prenom <- "Damien"
+    nom <- "Boulay"
+    Si prenom = "Damien" Et nom = "Boulay"
+        afficher("Bonjour " & prenom & " " & nom & ", comment allez-vous le formateur ?")
+    Sinon
+        afficher("Bonjour " & prenom & " " & nom & ", comment allez-vous jeune padawan ?")
+    Finsi
+
+    prenom <- "Jean"
+    nom <- "Tisne"
+    Si prenom = "Damien" Et nom = "Boulay"
+        afficher("Bonjour " & prenom & " " & nom & ", comment allez-vous le formateur ?")
+    Sinon
+        afficher("Bonjour " & prenom & " " & nom & ", comment allez-vous jeune padawan ?")
+    Finsi
+
+    prenom <- "Emeline"
+    nom <- "Fievre"
+    Si prenom = "Damien" Et nom = "Boulay"
+        afficher("Bonjour " & prenom & " " & nom & ", comment allez-vous le formateur ?")
+    Sinon
+        afficher("Bonjour " & prenom & " " & nom & ", comment allez-vous jeune padawan ?")
+    Finsi
+Fin
+
+// -- En plus propre
+Procédure saluer(prenom: chaine de caractères, nom: chaine de caractères)
+Variables
+Début
+    Si prenom = "Damien" Et nom = "Boulay"
+        afficher("Bonjour " & prenom & " " & nom & ", comment allez-vous le formateur ?")
+    Sinon
+        afficher("Bonjour " & prenom & " " & nom & ", comment allez-vous jeune padawan ?")
+    Finsi
+Fin
+
+Algorithme algomoinssale
+Variables prenom, nom: chaine de caractères
+Début
+    prenom <- "Damien"
+    nom <- "Boulay"
+    saluer(prenom, nom)
+
+    prenom <- "Jean"
+    nom <- "Tisne"
+    saluer(prenom, nom)
+
+    prenom <- "Emeline"
+    nom <- "Fievre"
+    saluer(prenom, nom)
+
+    saluer("Samuel", "Petit")
+Fin
+
+// -- En plus décomposé
+Fonction estFormateur(prenom: chaine de caractères, nom: chaine de caractères): Bouléen
+Variables resultat: bouléen
+Début
+    // Test de si la personne est le formateur
+    // Si prenom = "Damien" et nom = "Boulay"
+    //     resultat <- Vrai
+    // Sinon
+    //     resultat <- Faux
+    // Finsi
+    resultat <- prenom = "Damien" et nom = "Boulay"
+    // Renvoi du résultat
+    retourner(resultat)
+Fin
+
+Procédure saluer(prenom: chaine de caractères, nom: chaine de caractères)
+Variables
+Début
+    Si estFormateur(prenom, nom)
+        afficher("Bonjour " & prenom & " " & nom & ", comment allez-vous le formateur ?")
+    Sinon
+        afficher("Bonjour " & prenom & " " & nom & ", comment allez-vous jeune padawan ?")
+    Finsi
+Fin
+
+Algorithme algomoinssale
+Variables prenom, nom: chaine de caractères
+Début
+    prenom <- "Damien"
+    nom <- "Boulay"
+    saluer(prenom, nom)
+
+    prenom <- "Jean"
+    nom <- "Tisne"
+    saluer(prenom, nom)
+
+    prenom <- "Emeline"
+    nom <- "Fievre"
+    saluer(prenom, nom)
+
+    saluer("Samuel", "Petit")
+Fin

@@ -1,0 +1,38 @@
+// Le FizzBuzz : Compter de 1 à 100 et :
+//  - Remplacer les multiples de 3 par “Fizz”,
+//  - Remplacer les multiples de 5 par “Buzz”,
+//  - Remplacer les multiples de 15 par “FizzBuzz”,
+//  - Afficher “Bonus” après chaque nombre finissant par un 9 (9, 19, 29, etc.).
+Algorithme FizzBuzz
+Variables compteur: entier
+          texte : chaine de caractères
+Début
+    // Aller de 1 à 100
+    Pour compteur AllantDe 1 A 100
+        // Vider le texte
+        texte <- ""
+
+        // Fizz
+        Si compteur % 3 = 0
+            texte <- "Fizz"
+        Finsi
+
+        // Buzz
+        Si compteur % 5 = 0
+            texte <- texte & "Buzz"
+        Finsi
+
+        // Nombre normaux
+        Si texte = ""
+            texte <- compteur
+        Finsi
+
+        // Bonus
+        Si compteur % 10 = 9
+            texte <- texte + "Bonus"
+        Finsi
+
+        // Afficher
+        afficher(texte)
+    FinPour
+Fin

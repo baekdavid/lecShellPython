@@ -1,0 +1,13 @@
+// Demander à l’utilisateur un nombre jusqu’à ce que sa réponse soit entre 1 et 3 inclus.
+Algorithme entre1et3
+Variables nombreUtilisateur : réel
+Début
+    // Affecte une valeur volontairement fausse (Pour rentrer dans la boucle)
+    nombreUtilisateur <- -1
+    // Tant que la valeur n'est pas correcte
+    TantQue nombreUtilisateur < 1 Ou nombreUtilisateur > 3
+        // Demande le nombre à l'utilisateur
+        afficher("Donnez un nombre entre 1 et 3 inclus")
+        lire(nombreUtilisateur)
+    FinTantQue
+Fin

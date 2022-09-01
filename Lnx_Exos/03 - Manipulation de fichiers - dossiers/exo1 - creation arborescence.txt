@@ -1,0 +1,29 @@
+Pour être dans le dossier /home/user :
+cd
+
+Pour créer le dossier principal :
+mkdir entreprise
+
+Pour créer admin, common et documents :
+cd entreprise
+mkdir admin common documents
+
+Pour créer direction et rh dans admin :
+cd admin
+mkdir direction rh
+
+Pour créer memos dans common :
+cd ..
+mkdir common/memos
+
+Pour créer nom1 nom2 nom3 dans documents :
+cd documents
+mkdir nom1 nom2 nom3
+
+Pour créer salaries.txt et cafe.txt :
+cd ..
+touch admin/rh/salaries.txt
+touch common/memos/cafe.txt
+
+Pour créer le lien symbolique (Il faut préciser le chemin absolu dans la target):
+ln -s ~/entreprise/documents/nom1 admin/direction/home

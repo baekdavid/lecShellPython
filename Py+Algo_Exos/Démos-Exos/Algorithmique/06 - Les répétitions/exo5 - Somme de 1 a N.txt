@@ -1,0 +1,20 @@
+// Demander à l’utilisateur un entier et calculer la somme des nombres de 1 à cet entier
+Algorithme sommeDeUnANombre
+Variables nombreUtilisateur, compteur, somme : entier
+Début
+    // Demande à l'utilisateur
+    nombreUtilisateur <- 0
+    TantQue nombreUtilisateur <= 1
+        afficher("Nombre entier supérieur à 1 ? ")
+        lire(nombreUtilisateur)
+    FinTantQue
+
+    // Aller de 1 à l'entier
+    somme <- 0
+    Pour compteur AllantDe 1 A nombreUtilisateur
+        somme <- somme + compteur
+    FinPour
+
+    // Afficher la somme
+    afficher(somme)
+Fin

@@ -1,0 +1,5 @@
+01. Modifier le fichier pour limiter à deux cafés par jour
+sed -i 's/et illimite/dans la limite de deux par jour/' entreprise/common/memos/cafegratuit.txt 
+
+02. Confirmation de modification
+cat entreprise/common/memos/cafegratuit.txt 

@@ -1,0 +1,24 @@
+// Demander à l’utilisateur un nombre de cartes de visites et calculer le coût d’impression, avec la tarification suivante :
+//  - 0.4€/carte de 1 à 100 cartes,
+//  - 0.3€/carte de 101 à 200 cartes,
+//  - 0.2€/carte au-delà de 200 cartes.
+Algorithme prixcarte
+Variables quantite : entier
+Début
+    // Demander à l'utilisateur le nombre de cartes
+    afficher("Combien de cartes ?")
+    lire(quantite)
+
+    // <= 100
+    Si quantite <= 100
+        afficher(quantite * 0.4 & "€")
+    Sinon
+        // <= 200
+        Si quantite <= 200
+            afficher(100 * 0.4 + (quantite - 100) * 0.3 & "€")
+        // > 200
+        Sinon
+            afficher(100 * 0.4 + 100 * 0.3 + (quantite - 200) * 0.2 & "€")
+        Finsi
+    Finsi
+Fin

@@ -1,0 +1,23 @@
+// Faire un algorithme permettant de rentrer 10 notes dans un tableau ; il faudra ensuite demander à l’utilisateur l’index de la note souhaitée et l’afficher
+Algorithme lesnotes
+Variables indexMatiere, indexNote: entier
+          note: réel
+          tableau notes[3][10]: réel
+Début
+    // Remplir le tableau
+    Pour indexMatiere AllantDe 0 A 2
+        afficher("- Matière numéro " & indexMatiere + 1)
+        Pour indexNote AllantDe 0 A 9
+            afficher("Note à la position " & indexNote + 1)
+            lire(note)
+            notes[indexMatiere][indexNote] <- note
+        FinPour
+    FinPour
+
+    // Demander à l'utilisateur la note souhaitée
+    afficher("Quelle est la position de la matière souhaitée ?")
+    lire(indexMatiere)
+    afficher("Quelle est la position de la note souhaitée ?")
+    lire(indexNote)
+    afficher(notes[indexMatiere][indexNote])
+Fin

@@ -1,0 +1,24 @@
+// Créer une fonction pour calculer la factorielle d’un nombre.
+Fonction factorielle(nombre: entier): entier
+Variables i, produit: entier
+Début
+    // Valeur initiale
+    produit <- 1
+    // Calcul de la factorielle
+    Pour i AllantDe 1 A nombre
+        produit <- produit * i
+    FinPour
+    // Retour du résultat du calcul
+    retourner(produit)
+Fin
+
+Algorithme monalgo
+Variables nb, resultat: entier
+Début
+    // Demande le nombre à l'utilisateur
+    afficher("Obtenir la factorielle de : ")
+    lire(nb)
+    // Calcul puis affiche la factorielle
+    resultat <- factorielle(nb)
+    afficher(resultat)
+Fin

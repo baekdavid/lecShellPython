@@ -1,0 +1,8 @@
+01. Pour afficher le contenu du fichier salaries.txt
+cat entreprise/admin/rh/salaries.txt
+
+02. Pour ne garder que les noms d'utilisateurs
+cat entreprise/admin/rh/salaries.txt | cut -d: -f1
+
+03. Pour créer les dossiers
+cat entreprise/admin/rh/salaries.txt | cut -d: -f1 | xargs mkdir

@@ -1,0 +1,44 @@
+// Créer une procédure qui affiche le bruit d’un animal en fonction de son nom 
+Procédure afficherCriAnimal(nomAnimal: chaine de caractères)
+Variables cri: chaine de caractères
+          i: entier
+          tableau tableauCris[3][2]: chaine de caractère
+Début
+    tableauCris = [["chien", "Waff"], ["chat", "Miaou"], ["poisson", "Bloup"]]
+    // Peut être mis en forme avec des sauts de lignes et indentations : 
+    // tableauCris = [
+    //     ["chien", "Waff"],
+    //     ["chat", "Miaou"],
+    //     ["poisson", "Bloup"]
+    // ]
+
+    // Pour éviter de regarder les autres animaux une fois l'animal trouvé
+    // cri <- ""
+    // i <- 0
+    // TantQue i <= 2 Et cri = ""
+    //     Si tableauCris[i][0] = nomAnimal
+    //         cri <- tableauCris[i][1]
+    //     Finsi
+    //     i <- i + 1
+    // FinTantQue
+
+    // Recherche de l'animal
+    cri <- "Animal inconnu"
+    Pour i AllantDe 0 A 2
+        Si tableauCris[i][0] = nomAnimal
+            cri <- tableauCris[i][1]
+        Finsi
+    FinPour
+
+    // Affichage
+    afficher(cri)
+Fin
+
+Algorithme exo1
+Variables
+Début
+    afficherCriAnimal("chien")      // "Waff"
+    afficherCriAnimal("chat")       // "Miaou"
+    afficherCriAnimal("poisson")    // "Bloup"
+    afficherCriAnimal("girafe")     // "Animal inconnu"
+Fin

@@ -1,0 +1,36 @@
+// Demander à l’utilisateur deux nombres A (horizontal) et B (vertical), renvoyer le résultat (1,2,3) selon le tableau 
+Algorithme rechercheZone
+Variables A, B : entier
+Début
+    // Demande les informations
+    afficher("Merci de renseigner les deux indicateurs A (horizontal) et B (vertical)")
+    lire(A)
+    lire(B)
+
+    // Recherche hors tableau
+    Si A < 98 Ou A > 208 Ou B < 10 Ou B > 58
+        afficher("Les indicateurs sont hors tableau")
+    // Recherche dans le tableau
+    Sinon
+        // Zone 1
+        Si A <= 153 Et B <= 35   // de 10-98 à 35-153
+          Ou A <= 167 Et B <= 27 // de 10-98 à 27-167
+          Ou A <= 172 Et B <= 20 // de 10-98 à 20-172
+            afficher("Zone 1")
+        // Zone 2
+        Sinon
+            Si A <= 189 Et B <= 35 // de 10-98 à 35-189
+              Ou A >= 141 Et A <= 180 Et B >= 36 Et B <= 45 // de 36-141 à 45-180
+                afficher("Zone 2")
+        // Zone 3
+            Sinon
+                Si A >= 168 Et B >= 28 // de 28-168 à 58-208
+                    afficher("Zone 3")
+        // Hors zone
+                Sinon
+                    afficher("Hors zone")
+                Finsi
+            Finsi
+        Finsi
+    Finsi
+Fin

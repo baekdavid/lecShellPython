@@ -1,0 +1,32 @@
+Algorithme recherchetableau
+Variables compteur, position: entier
+          recherche: chaine de caractères
+          tableau t1[5]: caractère
+Début
+    // Définition du tableau
+    t1 <- ["a", "b", "c", "d", "c"]
+
+    // Demande à l'utilisateur que retrouver
+    afficher("Que souhaitez-vous trouver dans le tableau ?")
+    lire(recherche)
+
+    // Parcours du tableau pour retrouver c
+    position <- -1
+    Pour compteur AllantDe 0 A 4
+        // Et position = -1 permet de récupérer la première occurence de la recherche
+        // Sans cela, la dernière occurence sera celle conservée
+        // Par exemple "c", présent à l'index 2 et 4
+        //  - Sans "Et position = -1" -> position = 4
+        //  - Avec "Et position = -1" -> position = 2
+        Si t1[compteur] = recherche Et position = -1
+            position <- compteur
+        FinSi
+    FinPour
+
+    // Afficher position
+    Si position > -1
+        afficher(recherche & " est à la position " & position)
+    Sinon
+        afficher(recherche & " n'a pas été trouvé dans le tableau")
+    Finsi
+Fin
