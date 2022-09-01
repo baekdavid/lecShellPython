@@ -1,5 +1,5 @@
 prenom = "Damien" # prenom est un str (chaine de caractère)
-print(prenom)     # affiche "Damien"
+print(prenom)     # affiche "David"
 prenom = 2        # prenom devient un int (entier)
 print(prenom)     # affiche 2
 prenom = 3.5      # prénom devient un float (réel)
